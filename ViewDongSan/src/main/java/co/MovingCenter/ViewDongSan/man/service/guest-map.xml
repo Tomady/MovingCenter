@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="co.MovingCenter.ViewDongSan.man.service.GuestMapper">
+
+	<select id="selectListGuest"
+		resultType="co.MovingCenter.ViewDongSan.man.service.GuestVO">
+		SELECT * FROM GUEST
+	</select>
+	
+	<delete id="guestDelete" parameterType="co.MovingCenter.ViewDongSan.man.service.GuestVO">
+		DELETE FROM GUEST WHERE GUESTID = #{guestid}
+	</delete>
+	
+	<select id="selectGuest" resultType="co.MovingCenter.ViewDongSan.man.service.GuestVO">
+			SELECT * FROM GUEST WHERE GUESTID = #{guestid} AND GPASSWORD = #{gpassword}
+	</select>
+
+</mapper>

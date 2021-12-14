@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="co.MovingCenter.ViewDongSan.man.service.HostMapper1">
+
+	<select id="selectListHost"
+		resultType="co.MovingCenter.ViewDongSan.man.service.HostVO1">
+		SELECT * FROM HOST
+	</select>
+
+	<select id="selectHost"
+		resultType="co.MovingCenter.ViewDongSan.man.service.HostVO1">
+		SELECT * FROM HOST WHERE HOSTID = #{hostid} AND HPASSWORD =
+		#{hpassword}
+	</select>
+	
+	<delete id="hostDelete" parameterType="co.MovingCenter.ViewDongSan.man.service.HostVO1">
+		DELETE FROM HOST WHERE HOSTID = #{hostid}
+	</delete>
+	
+	<update id="hostUpdate" parameterType="co.MovingCenter.ViewDongSan.man.service.HostVO1">
+		UPDATE HOST SET AUTHOR =#{author} WHERE HOSTID = #{hostid}
+	</update>
+	
+</mapper>
