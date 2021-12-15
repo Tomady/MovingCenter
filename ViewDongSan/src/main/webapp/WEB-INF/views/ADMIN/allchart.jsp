@@ -8,9 +8,47 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-#chartid {
-	margin-top: 100px
-}
+	button {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+
+			background: var(--button-bg-color);
+			color: var(--button-color);
+
+			margin: 0;
+			padding: 0.5rem 1rem;
+
+			font-family: 'Noto Sans KR', sans-serif;
+			font-size: 1rem;
+			font-weight: 400;
+			text-align: center;
+			text-decoration: none;
+
+			border: none;
+			border-radius: 4px;
+
+			display: inline-block;
+			width: auto;
+
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+			cursor: pointer;
+
+			transition: 0.5s;
+			color: white;
+		}
+		button.chartbtn{
+			--button-bg-color: #b5dfdb ;
+			--button-hover-bg-color: #ccc6ff;
+		}
+
+		button:active,
+		button:hover,
+		button:focus {
+			background: var(--button-hover-bg-color);
+			outline: 0;
+		}
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -33,7 +71,7 @@
 					<option value="${name }">${name }
 				</c:forEach>
 			</select>
-			<button type="button" id="" onclick="createChart()">확인</button>
+			<button type="button" class="chartbtn" onclick="createChart()" >확인</button>
 	</div>
 	<script type="text/javascript">
 			createChart();

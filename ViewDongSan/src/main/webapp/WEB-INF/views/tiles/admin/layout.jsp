@@ -44,9 +44,6 @@
 <link href="vendor/datatables/dataTables.bootstrap4.min.css"
 	rel="stylesheet">
 	<style>
-		.navbar-nav ml-auto{
-			margin-top: 100px !important; 
-		}
 	</style>
 </head>
 <body>

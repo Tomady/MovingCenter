@@ -15,5 +15,11 @@
 	<select id="selectGuest" resultType="co.MovingCenter.ViewDongSan.man.service.GuestVO">
 			SELECT * FROM GUEST WHERE GUESTID = #{guestid} AND GPASSWORD = #{gpassword}
 	</select>
+	
+	<select id="selectGuestId" resultType="co.MovingCenter.ViewDongSan.man.service.GuestVO">
+			SELECT * FROM GUEST WHERE GUESTID = #{guestid}
+	</select>
+
+
 
 </mapper>

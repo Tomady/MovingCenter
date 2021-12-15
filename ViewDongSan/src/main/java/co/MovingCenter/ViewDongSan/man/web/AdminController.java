@@ -66,12 +66,15 @@ public class AdminController {
 	}
 
 	@RequestMapping("/main.do")
-	public String login(HttpServletResponse response, @RequestParam("id") String id, @RequestParam("pw") String password, Model model) throws IOException {
+	public String login(HttpServletResponse response,HttpSession session, @RequestParam("id") String id, @RequestParam("pw") String password, Model model) throws IOException {
 		System.out.println("login2");
 		String path = "";
-
+		
+		
+		
 		AdminVO avo = new AdminVO();
 		avo.setAdminid(id);
+		
 		avo.setAdminpassword(password);
 		avo = adminDao.selectAdmin(avo);
 
@@ -79,12 +82,14 @@ public class AdminController {
 			HostVO1 hvo = new HostVO1();
 			hvo.setHostid(id);
 			hvo.setHpassword(password);
+//			session.setAttribute(id, hvo.getHostid());
 			hvo = hostDao1.selectHost(hvo);
 
 			if (hvo == null) {
 				GuestVO gvo = new GuestVO();
 				gvo.setGuestid(id);
 				gvo.setGpassword(password);
+//				session.setAttribute(id, gvo.getGuestid());
 				gvo = guestDao.selectGuest(gvo);
 				if (gvo != null) {
 					path = "GUEST/main";

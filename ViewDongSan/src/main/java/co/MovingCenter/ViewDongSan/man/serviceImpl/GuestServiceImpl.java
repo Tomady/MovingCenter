@@ -32,4 +32,10 @@ public class GuestServiceImpl implements GuestService {
 		return map.guestDelete(guestid);
 	}
 
+	@Override
+	public GuestVO selectGuestId(GuestVO vo) {
+		// TODO Auto-generated method stub
+		return map.selectGuestId(vo);
+	}
+
 }

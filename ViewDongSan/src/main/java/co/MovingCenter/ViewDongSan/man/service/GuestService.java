@@ -9,6 +9,8 @@ public interface GuestService {
 
 	GuestVO selectGuest(GuestVO vo);
 	
+	GuestVO selectGuestId(GuestVO vo);
+	
 	
 
 }

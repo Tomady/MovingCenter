@@ -7,6 +7,8 @@ public interface GuestMapper {
 	public List<GuestVO> selectListGuest();
 
 	GuestVO selectGuest(GuestVO vo);
+	
+	GuestVO selectGuestId(GuestVO vo);
 
 	int guestDelete(String guestid);
 
